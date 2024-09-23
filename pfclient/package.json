@@ -50,7 +50,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "HTTPS=true SSL_CRT_FILE=cert.pem SSL_KEY_FILE=key.pem  craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
