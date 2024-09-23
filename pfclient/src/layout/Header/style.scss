@@ -1,0 +1,91 @@
+@import "../../assets/styles/components/variables";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px; 
+  padding-left: 65px;
+  padding-top:20px;
+  padding-bottom: 5px;
+  padding-right: 40px;
+  
+  .user-panel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    img {
+      min-width: fit-content;
+    }
+
+    h6 {
+      font-size: 10px;
+    }
+
+    div:first-child {
+      display: flex;
+      gap: 16px;
+    }
+
+    div:nth-child(2) {
+      display: flex;
+      gap: 5px;
+      margin-left: 15px;
+    }
+
+    div:last-child {
+      display: flex;
+      gap: 21px;
+      margin-left: 28px;
+
+      img:nth-child(2) {
+        min-width: 25px;
+        height: 25px;
+        padding: 4px;
+        background: var(--background-secondery);
+        border-radius: 50px;
+      }
+    }
+  }
+
+  .user-panel * {
+    cursor: pointer;
+  }
+
+  .burger-menu {
+    display: none;
+    background: transparent;
+
+    &__svg {
+      fill: var(--text-primary);
+      width: 40px;
+      height: 100%;
+    }
+  }
+}
+
+@include _1170 {
+  header {
+    .user-panel {
+      display: none;
+    }
+
+    .burger-menu {
+      display: block;
+    }
+  }
+
+  .mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 5px;
+    padding: 0 20px;
+    width: 100%;
+    @include box-primary;
+    z-index: 100;
+    border-radius: 0px !important; 
+
+  }
+}

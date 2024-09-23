@@ -1,0 +1,89 @@
+@import "../../assets/styles/components/variables";
+
+.technical-analysis {
+  &__contaner {
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    @include box-primary;
+    padding: 30px;
+  }
+
+  &__dropdowns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__chart {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+  }
+
+  &__info {
+    margin-top: 30px;
+
+    h3 {
+      text-align: center;
+    }
+
+    h4 {
+      text-align: center;
+      font-size: 16px;
+
+      &:last-child {
+        margin-top: 3px;
+      }
+    }
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      max-width: 300px;
+      margin: 30px auto 0 auto;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+
+    > div:first-child {
+      display: flex;
+      gap: 15px;
+
+      > button {
+        @include botton-primety;
+        width: fit-content;
+        height: 28px;
+      }
+    }
+
+    > div:last-child {
+      div {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 25px;
+        cursor: pointer;
+      }
+    }
+
+    p {
+      font-size: 13px;
+      color: var(--text-gray);
+      font-weight: 500;
+    }
+  }
+}
+
+@include _480 {
+  .technical-analysis {
+    &__footer {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

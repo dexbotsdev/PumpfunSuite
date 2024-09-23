@@ -1,0 +1,61 @@
+@import "../../../assets/styles/components/variables";
+
+.trade-ratio {
+  @include box-primary;
+  width: 100%;
+  height: 100%;
+  padding: 38px;
+
+  > div:first-child {
+    display: flex;
+    gap: 13px;
+
+    h3 {
+      font-size: 23px;
+    }
+  }
+
+  > h3 {
+    margin-top: 31px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    h3 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+  }
+
+  > div:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+
+    h4 {
+      color: #cf304a;
+      font-size: 17.8px;
+      font-weight: 600;
+
+      &:first-child {
+        color: #03a66d;
+      }
+    }
+  }
+
+  .range-slider {
+    width: 100%;
+    height: 6.3px;
+    background: #cf304a;
+    margin-top: 20px;
+
+    div {
+      background: #03a66d;
+    }
+  }
+}

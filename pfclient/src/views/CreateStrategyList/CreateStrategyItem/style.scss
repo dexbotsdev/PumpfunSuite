@@ -1,0 +1,82 @@
+@import "../../../assets/styles/components/variables";
+
+.create-strategy-item {
+  @include box-primary;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:first-child {
+    margin-top: 32px;
+  }
+
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    div {
+      height: 100%;
+    }
+  }
+
+  h3 {
+    color: #2c406e;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-gray);
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    padding-right: 20px;
+    margin-top: 20px;
+  }
+
+  button {
+    @include active-botton-primety;
+    justify-content: center;
+    align-items: center;
+    width: 84px;
+    height: 28px;
+  }
+}
+
+@include _600 {
+  .create-strategy-item {
+    > div:first-child {
+      img {
+        width: 35px;
+      }
+    }
+  }
+}
+
+@include _480 {
+  .create-strategy-item {
+    padding: 15px;
+
+    flex-direction: column;
+    gap: 20px;
+
+    > div:first-child {
+      img {
+        width: 35px;
+      }
+    }
+
+    button {
+      align-self: flex-end;
+    }
+  }
+}

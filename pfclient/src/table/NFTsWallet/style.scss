@@ -1,0 +1,111 @@
+@import "../../assets/styles/components/variables";
+
+.nfts-wallet {
+  &__panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      height: 30px;
+      padding: 0 13px;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 4px 4px 20px 0px rgba(167, 193, 214, 0.3),
+        -4px -4px 6px 0px rgba(255, 255, 255, 0.6);
+      color: var(--text-primary);
+      font-size: 13px;
+      font-weight: 700;
+
+      svg {
+        width: 4px;
+        margin-left: 10px;
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      background: #fff;
+      box-shadow: 4px 4px 20px 0px rgba(167, 193, 214, 0.3),
+        -4px -4px 6px 0px rgba(255, 255, 255, 0.6);
+      border-radius: 3px;
+      margin-left: auto;
+
+      > label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        max-width: 250px;
+        padding: 0 15px;
+
+        > input {
+          background: transparent;
+          color: var(--text-primary);
+          font-size: 13px;
+          min-width: 90%;
+
+          &::placeholder {
+            font-family: Lato;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            color: #2c406e;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  &__content-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 50px;
+    margin-top: 40px;
+  }
+
+  &__item {
+    @include box-primary;
+    width: 219px;
+    height: 290px;
+
+    h3 {
+      margin-top: 9px;
+      margin-left: 15px;
+      font-size: 18px;
+
+      &:last-child {
+        margin-top: 7px;
+
+        color: var(--text-gray);
+      }
+    }
+  }
+}
+
+@include _480 {
+  .nfts-wallet {
+    &__panel {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      button {
+        padding: 0 11px;
+        font-size: 12px;
+      }
+
+      > div {
+        width: 100%;
+      }
+    }
+  }
+}

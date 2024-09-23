@@ -1,0 +1,49 @@
+@import "../../../assets/styles/components/variables";
+
+.renge-slider-chart {
+  width: 100%;
+  height: 100%;
+  @include box-primary;
+  padding: 30px;
+
+  h3 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+
+  &__chart {
+    width: 100%;
+    margin-top: 30px;
+
+    > div:first-child {
+      display: flex;
+      justify-content: space-between;
+
+      h4 {
+        color: var(--text-gray);
+      }
+    }
+    .range-slider {
+      position: relative;
+      width: 100%;
+      height: 4px;
+      background: #edf5ff;
+      border-radius: 40px;
+      margin-top: 15px;
+
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        background: var(--background-secondery);
+        border-radius: 40px;
+      }
+    }
+  }
+
+  img {
+    margin-top: 30px;
+  }
+}

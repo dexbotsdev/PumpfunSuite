@@ -1,0 +1,222 @@
+@import "../../../assets/styles/components/variables";
+
+.form-strategy {
+  @include box-primary;
+  width: 100%;
+  height: 100%;
+  padding: 30px 38px;
+
+  h2 {
+    font-size: 18px;
+  }
+
+  > div:last-child {
+    margin-top: 26px;
+    display: flex;
+
+    button:first-child {
+      width: 115px;
+      height: 28px;
+      border-radius: 3px;
+      border: 1px solid #2b7aff;
+      background: #fefefe;
+      font-size: 13px;
+      color: var(--text-primary);
+
+      &:hover {
+        background: #eff4ff;
+      }
+    }
+
+    a {
+      display: block;
+      color: #fff;
+      height: 28px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    width: fit-content;
+    height: 28px;
+    border-radius: 4px;
+    background: #2b7aff;
+    box-shadow: 4px 4px 10px 0px rgba(0, 23, 103, 0.3),
+      -4px -4px 6px 0px rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    color: #fff;
+    padding: 0 38px;
+
+    &:hover {
+      background: #0e66ff;
+    }
+  }
+}
+
+.general-settings {
+  &__wrapper-1 {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    width: 100%;
+  }
+
+  &__wrapper-2 {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    column-gap: 75px;
+    width: 65%;
+  }
+}
+
+.strategy-settings {
+  margin-top: 30px;
+
+  &__wrapper-1 {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    width: 100%;
+  }
+
+  &__wrapper-2 {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    column-gap: 75px;
+    width: 65%;
+  }
+}
+
+.profit {
+  width: 100%;
+  margin-top: 30px;
+
+  &__wrapper {
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    column-gap: 75px;
+    width: 65%;
+  }
+}
+
+@include _1600 {
+  .general-settings {
+    &__wrapper-1 {
+      gap: 45px;
+    }
+
+    &__wrapper-2 {
+      column-gap: 45px;
+    }
+  }
+
+  .strategy-settings {
+    &__wrapper-1 {
+      gap: 45px;
+    }
+
+    &__wrapper-2 {
+      column-gap: 45px;
+    }
+  }
+
+  .profit {
+    &__wrapper {
+      column-gap: 45px;
+    }
+  }
+}
+
+@include _1440 {
+  .form-strategy {
+    &__btn {
+      padding: 0 28px;
+    }
+  }
+}
+
+@include _768 {
+  .form-strategy {
+    > div:last-child {
+      margin-top: 50px;
+    }
+  }
+
+  .general-settings {
+    &__wrapper-1 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__wrapper-2 {
+      width: 100%;
+    }
+  }
+
+  .strategy-settings {
+    margin-top: 50px;
+
+    &__wrapper-1 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__wrapper-2 {
+      width: 100%;
+    }
+  }
+
+  .profit {
+    margin-top: 50px;
+
+    &__wrapper {
+      grid-template: 1fr / repeat(2, 1fr);
+      width: 100%;
+    }
+  }
+}
+
+@include _600 {
+  .general-settings {
+    &__wrapper-2 {
+      column-gap: 15px;
+    }
+  }
+
+  .strategy-settings {
+    &__wrapper-2 {
+      column-gap: 15px;
+    }
+  }
+}
+
+@include _480 {
+  .form-strategy {
+    > div:last-child {
+      button:first-child {
+        width: 100px;
+      }
+    }
+  }
+
+  .general-settings {
+    &__wrapper-2 {
+      row-gap: 15px;
+      grid-template: auto / auto;
+    }
+  }
+
+  .strategy-settings {
+    &__wrapper-2 {
+      row-gap: 15px;
+      grid-template: auto / auto;
+    }
+  }
+
+  .profit {
+    &__wrapper {
+      grid-template: auto / auto;
+    }
+  }
+}

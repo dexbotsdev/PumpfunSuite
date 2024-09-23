@@ -1,0 +1,161 @@
+@import "../../assets/styles/components/variables";
+
+.key-metrics {
+  width: 100%;
+  height: 100%;
+  @include box-primary;
+  padding: 30px;
+  margin-top: 40px;
+
+  > p {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @include botton-primety;
+      width: fit-content;
+      height: 30px;
+      font-size: 16px;
+      background: #fff;
+      color: var(--text-primary);
+
+      &:hover {
+        .btn-svg * {
+          stroke: #fff;
+        }
+      }
+    }
+
+    > div {
+      display: flex;
+      gap: 6px;
+
+      > button {
+        @include botton-primety;
+        justify-content: center;
+        color: var(--text-primary);
+        font-size: 16px;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+      }
+
+      .btn-active {
+        @include active-botton-primety;
+        justify-content: center;
+        font-size: 16px;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__chart {
+    margin-top: 30px;
+
+    > div:first-child {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      p {
+        font-size: 12px;
+      }
+    }
+
+    > div:last-child {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -40px;
+
+      div {
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 545px;
+
+        button {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          @include botton-primety;
+          width: fit-content;
+          height: 30px;
+          font-size: 16px;
+          background: #fff;
+
+          &:hover {
+            .btn-svg * {
+              stroke: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+
+    th {
+      text-align: left;
+      padding-top: 30px;
+      color: var(--text-gray);
+    }
+
+    td {
+      padding-top: 20px;
+    }
+  }
+}
+
+@include _480 {
+  .key-metrics {
+    padding: 20px 10px;
+
+    &__filter {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    table {
+      font-size: 8px;
+      font-weight: 600;
+    }
+  }
+}
+
+@include _768 {
+  .key-metrics {
+    &__chart {
+      > div:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@include _1024 {
+  .key-metrics {
+    &__chart {
+      > div:last-child {
+        margin-top: -10px;
+      }
+    }
+  }
+}

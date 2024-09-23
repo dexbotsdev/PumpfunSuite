@@ -1,0 +1,60 @@
+@import "../../assets/styles/components/variables";
+
+.list-tranding-strategies {
+  width: 100%;
+  margin-top: 40px;
+
+  &__panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    > div {
+      display: flex;
+      gap: 15px;
+    }
+
+    button {
+      @include botton-primety;
+      width: 85px;
+      padding: 12px 15px;
+      color: var(--text-primary);
+
+      &:hover {
+        svg * {
+          fill: #fff;
+        }
+      }
+    }
+
+    button:last-child {
+      @include active-botton-primety;
+      justify-content: center;
+      width: 141px;
+      padding: 12px 15px;
+    }
+  }
+
+  &__content {
+    margin-top: -12px;
+  }
+}
+
+@include _480 {
+  .list-tranding-strategies {
+    &__panel {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+
+      > div {
+        align-self: flex-end;
+      }
+    }
+  }
+}

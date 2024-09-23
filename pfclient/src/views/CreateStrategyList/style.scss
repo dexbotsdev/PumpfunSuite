@@ -1,0 +1,24 @@
+@import "../../assets/styles/components/variables";
+
+.create-strategy {
+  margin-top: 53px;
+
+  > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      @include botton-primety;
+      width: fit-content;
+      color: var(--text-primary);
+      justify-content: center;
+      width: 77px;
+      height: 40px;
+    }
+  }
+
+  ul {
+    margin-top: 27px;
+  }
+}

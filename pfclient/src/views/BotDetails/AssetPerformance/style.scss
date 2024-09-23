@@ -1,0 +1,104 @@
+@import "../../../assets/styles/components/variables";
+
+.asset-performance {
+  @include box-primary;
+  width: 100%;
+  height: 100%;
+  padding: 38px;
+
+  > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 26px;
+      width: 40px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    div {
+      display: flex;
+      gap: 13px;
+
+      h3 {
+        font-size: 23px;
+      }
+    }
+  }
+
+  > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+
+    div:last-child {
+      margin-right: 65px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+  }
+
+  > div:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    div:last-child {
+      margin-right: 65px;
+    }
+
+    div {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+
+      h5 {
+        color: #03a66d;
+        font-size: 17.8px;
+        font-weight: 600;
+      }
+
+      svg * {
+        fill: #03a66d;
+      }
+
+      svg {
+        margin-top: 4px;
+        transform: rotate(180deg);
+        width: 6.105px;
+        height: 4.829px;
+      }
+    }
+  }
+}
+
+@include _480 {
+  .asset-performance {
+    > div:first-child {
+      a {
+        display: none;
+      }
+    }
+
+    > div:nth-child(2),
+    > div:nth-child(3) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+
+      div:last-child {
+        margin-right: 15px;
+      }
+    }
+  }
+}

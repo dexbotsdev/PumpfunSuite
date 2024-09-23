@@ -1,0 +1,80 @@
+@import "../../../assets/styles/components/variables";
+
+.ad-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  min-height: 134px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 4px 4px 20px 0px rgba(29, 63, 92, 0.4),
+    4px 4px 6px 0px rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  margin-top: 40px;
+  background-position: 50% 10%;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  p {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: normal;
+    color: rgba(44, 64, 110, 0.6);
+  }
+
+  > div {
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  > div:last-child {
+    min-width: 230px;
+
+    div:last-child {
+      display: flex;
+      justify-content: flex-end;
+      div {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        width: 100px;
+        height: 80px;
+        margin-top: 30px;
+
+        svg {
+          cursor: pointer;
+
+          &:hover * {
+            fill: rgb(0, 153, 255);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include _1024 {
+  .ad-about {
+    flex-wrap: wrap;
+
+    > div:last-child {
+      min-width: 240px;
+
+      div:last-child {
+        div {
+          display: grid;
+          grid-template: 1fr / repeat(4, 1fr);
+          width: 200px;
+          height: 20px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

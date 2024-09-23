@@ -1,0 +1,150 @@
+@import "../../assets/styles/components/variables";
+
+.wallet {
+  margin-top: 15px;
+
+  h2 {
+    font-size: 20px;
+  }
+
+  &__divider {
+    margin-top: 12px;
+    height: 1px;
+    width: 100%;
+    background: #e4f0ff;
+  }
+
+  &__amounts {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+
+    h4 {
+      margin-top: 18px;
+    }
+    h2 {
+      margin-top: 13px;
+    }
+  }
+
+  &__total {
+    margin-right: auto;
+  }
+
+  &__content {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.panel-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 30px;
+    padding: 0 13px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 4px 4px 20px 0px rgba(167, 193, 214, 0.3),
+      -4px -4px 6px 0px rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.1s;
+
+    &:hover {
+      background: var(--background-secondery);
+      color: #fff;
+      box-shadow: none;
+    }
+  }
+
+  .active {
+    background: var(--background-secondery);
+    color: #fff;
+    box-shadow: none;
+  }
+
+  &__left {
+    display: flex;
+
+    button {
+      margin-right: 15px;
+    }
+  }
+
+  &__right {
+    display: flex;
+
+    button {
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include _600 {
+  .wallet {
+    &__amounts {
+      display: grid;
+      grid-template: auto / 1fr 1fr;
+      gap: 0;
+
+      > div:nth-child(2),
+      > div:nth-child(4) {
+        justify-self: end;
+      }
+    }
+
+    &__total {
+      margin-right: 0;
+    }
+  }
+
+  .panel-buttons {
+    flex-direction: column;
+
+    &__right {
+      margin-top: 20px;
+    }
+  }
+}
+
+@include _480 {
+  .panel-buttons {
+    button {
+      padding: 0 8px;
+    }
+
+    &__left {
+      display: flex;
+
+      button {
+        margin-right: 10px;
+      }
+    }
+
+    &__right {
+      display: flex;
+
+      button {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

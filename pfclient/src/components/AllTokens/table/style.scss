@@ -1,0 +1,131 @@
+@import "../../../assets/styles/components/variables";
+
+.all-tokens-table {
+  width: 1527px;
+  height: 605px;
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    min-width: 33px;
+    min-height: 33px;
+    max-width: 33px;
+    max-height: 33px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  td {
+    padding: 10px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  tr {
+    .row-1 {
+      cursor: pointer;
+    }
+
+    .row-2 {
+      display: flex;
+      gap: 13px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+
+    .row-5 {
+      padding: 0 10px;
+    }
+
+    .row-4,
+    .row-6 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 5px;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .row-7,
+    .row-9 {
+      display: flex;
+      gap: 15px;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 5px;
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+
+    .row-11 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 17px;
+
+      div:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h6 {
+          font-size: 12px;
+          color: var(--text-gray);
+        }
+      }
+    }
+  }
+
+  .line-small-chart {
+    width: 115px;
+    height: 35px;
+  }
+}
+
+.range-slider {
+  position: relative;
+  width: 125px;
+  height: 4px;
+  background: #edf5ff;
+  border-radius: 40px;
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: var(--background-secondery);
+    border-radius: 40px;
+  }
+}

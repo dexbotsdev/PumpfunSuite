@@ -1,0 +1,53 @@
+@import "./media";
+
+:root {
+  --text-primary: #2c406e;
+  --text-secondary: #2c406eb2;
+  --text-additional: #60577f;
+  --text-gray: #a6b2cd;
+
+  --background-primary: #f6f9ff;
+  --background-secondery: #3F51B5;
+}
+
+@mixin box-primary {
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 4px 4px 20px 0px #2196f38c, -4px -4px 6px 0px #fff9;
+}
+
+@mixin active-botton-primety {
+  display: flex;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  min-height: 30px;
+  background: var(--background-secondery);
+  border-radius: 3px;
+  box-shadow: 0px 8px 15px 0px rgba(0, 51, 150, 0.3);
+  color: #fff;
+
+  &:hover {
+    background: #0e66ff;
+  }
+}
+
+@mixin botton-primety {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  min-height: 30px;
+  background: var(--background-primary);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 4px 4px 20px 0px rgba(167, 193, 214, 0.3),
+    -4px -4px 6px 0px rgba(255, 255, 255, 0.6);
+  color: rgba(44, 64, 110, 0.5);
+
+  &:hover {
+    background: #0e66ff;
+    color: #fff;
+    box-shadow: 0px 8px 15px 0px rgba(0, 51, 150, 0.3);
+  }
+}

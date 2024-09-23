@@ -1,0 +1,142 @@
+@import "../../assets/styles/components/variables";
+
+.summaty {
+  margin-top: 20px;
+
+  &__line-chart {
+    width: 100%;
+    height: 346px;
+    @include box-primary;
+    padding: 30px 25px;
+
+    .highcharts-container {
+      height: 170px !important;
+    }
+  }
+
+  .doughnut-chart {
+    width: 100%;
+    height: 100%;
+    @include box-primary;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    &__wrapper {
+      position: relative;
+      width: 175px;
+      height: 175px;
+      margin: 0 auto 0 auto;
+    }
+
+    &__text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+
+      h5 {
+        color: rgba(44, 64, 110, 0.5);
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      h4 {
+        font-size: 15px;
+        font-weight: 900;
+      }
+    }
+
+    &__border {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 114px;
+      height: 114px;
+      border: 1px solid rgba(44, 64, 110, 0.1);
+      border-radius: 100px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+
+        span {
+          min-width: 8px;
+          height: 8px;
+          border-radius: 1px;
+        }
+      }
+    }
+  }
+
+  &__panel-line-chart {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    div:first-child {
+      h3 {
+        margin-top: 30px;
+        font-size: 24px;
+      }
+
+      h4 {
+        margin-top: 5px;
+        color: var(--text-gray);
+      }
+    }
+
+    div:last-child {
+      display: flex;
+      gap: 22px;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: 30px;
+        padding: 0 13px;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 4px 4px 20px 0px rgba(167, 193, 214, 0.3),
+          -4px -4px 6px 0px rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--text-primary);
+        transition: all 0.1s;
+
+        &:hover {
+          background: var(--background-secondery);
+          color: #fff;
+          box-shadow: none;
+        }
+      }
+
+      .active {
+        background: var(--background-secondery);
+        color: #fff;
+        box-shadow: none;
+      }
+    }
+  }
+}

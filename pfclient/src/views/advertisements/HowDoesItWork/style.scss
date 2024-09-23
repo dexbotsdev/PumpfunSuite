@@ -1,0 +1,35 @@
+@import "../../../assets/styles/components/variables";
+
+.how-work {
+  width: 100%;
+  height: 100%;
+  @include box-primary;
+  padding: 38px 30px;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 22px;
+  }
+
+  a {
+    color: var(--background-secondery);
+  }
+}
+
+@include _1600 {
+  .how-work {
+    padding: 30px;
+
+    p {
+      line-height: 18px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.slider-custom {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+
+  .input-text-custom {
+    min-width: 106px;
+    max-width: 106px;
+
+    &::after {
+      content: "%";
+      position: absolute;
+      top: 31px;
+      right: 0;
+    }
+  }
+
+  > div:last-child {
+    position: relative;
+    top: 10px;
+    width: 100%;
+
+    .ant-slider-handle::after {
+      background: #2b7aff;
+      box-shadow: none;
+    }
+  }
+}
